@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SpendWise (In Progress)
 
-## Getting Started
+Welcome to **SpendWise** – Your Smart Expense Tracker!
 
-First, run the development server:
+Managing your finances has never been easier. Introducing SpendWise, the intuitive expense tracker designed to empower you on your journey to financial well-being. Whether you're a budgeting novice or a seasoned pro, SpendWise is here to simplify the way you track and manage your expenses.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+With SpendWise, you can effortlessly log your expenditures, categorize them with ease, and gain valuable insights into your spending habits. Take control of your financial destiny by setting budgets, visualizing your spending patterns, and making informed decisions about where your money goes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Key Features:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **Streamlined Expense Entry:** Quickly add your expenses with just a few taps. It's as easy as pie!
+-   **Categories and Tags:** Organize your spending into customizable categories and tags for a clearer financial picture.
+-   **Real-time Totals:** Watch your expenses add up in real-time, and stay on top of your budget effortlessly.
+-   **Smart Filters:** Find specific transactions with ease using our intuitive filtering and search options.
+-   **Visual Analytics:** Get a visual representation of your spending habits with insightful charts and graphs.
+-   **Budget Tracking:** Set budgets, track your progress, and receive timely notifications to stay within your financial goals.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+SpendWise is not just an app; it's your financial ally, helping you navigate the path to financial freedom. Start making wiser spending decisions today with SpendWise – because financial well-being begins with smart choices.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Download SpendWise now and embark on a journey to a more financially conscious and empowered you!
