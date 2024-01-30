@@ -1,38 +1,62 @@
 'use client';
 
-import Logo from '@/components/Logo';
+import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
-	function handleSubmit(e: any) {
+	const router = useRouter();
+
+	async function handleSubmit(e: any) {
 		e.preventDefault();
 
-		console.log(email, password);
+		try {
+			const res = await fetch('/api/auth/login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					email,
+					password,
+				}),
+			});
+
+			if (res.ok) {
+				router.push('/dashboard');
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	}
 
 	return (
 		<>
-			<header className="py-4 flex items-center justify-center">
-				<a href="/">
-					<Logo />
-				</a>
-			</header>
+			<Navbar />
 
-			<main>
-				<div className="grid md:grid-cols-2">
-					<div>
-						<img src="" alt="girl saving money" className="w-full h-full" />
-					</div>
+			<main className="py-4">
+				<div className="container">
+					<h2 className="text-5xl text-center font-bold mb-4 text-green-500">Login</h2>
 
-					<div>
-						<h2 className="text-3xl font-semibold mb-4">Login</h2>
-						<p>Login to gain access to your account and start managing your expenses today!</p>
+					<div className="card mx-auto max-w-md space-y-4">
+						<Image
+							className="mx-auto"
+							src="/images/login-image.svg"
+							alt="girl standing by big laptop"
+							width={200}
+							height={200}
+						/>
 
-						<form className="mt-8" onSubmit={handleSubmit}>
-							<div>
+						<p className="text-center text-gray-500">
+							Login to gain access to your account and start managing your expenses today!
+						</p>
+
+						<form className="" onSubmit={handleSubmit}>
+							<div className="grid gap-0.5 mb-2">
 								<label htmlFor="email" className="block mb-2">
 									Email
 								</label>
@@ -45,7 +69,7 @@ const Page = () => {
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 							</div>
-							<div>
+							<div className="grid gap-0.5">
 								<label htmlFor="password" className="block mb-2">
 									Password
 								</label>
@@ -62,7 +86,7 @@ const Page = () => {
 							<div>
 								<button
 									type="submit"
-									className="bg-blue-500 text-white px-4 py-2 w-full rounded"
+									className="btn btn-primary w-full mt-4"
 									disabled={email === '' || password === ''}
 								>
 									Login
